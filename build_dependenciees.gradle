@@ -1,0 +1,68 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+//    kotlin
+    kotlin_version = '1.1.2-2'
+    //Android
+    androidBuildToolsVersion = '25.0.1'
+    androidMinSdkVersion = 15
+    androidTargetSdkVersion = 25
+    androidCompileSdkVersion = 25
+
+    //Libraries
+    recyclerViewVersion = '21.0.3'
+    rxJavaVersion = '2.0.8'
+    rxAndroidVersion = '2.0.1'
+    javaxAnnotationVersion = '10.0-b28'
+    javaxInjectVersion = '1'
+    gsonVersion = '2.3'
+    okHttpVersion = '3.6.0'
+    androidAnnotationsVersion = '21.0.3'
+    arrowVersion = '1.0.0'
+
+    daggerVersion = '2.9'
+
+    retrofitVersion = '2.2.0'
+
+    androidSupportVersion = '25.0.1'
+    constraintVersion = "1.0.2"
+
+    butterknifeVersion = '8.5.1'
+    googleFactoryVersion = '1.0-beta4'
+    androidSupport = [
+            appcompatv7: "com.android.support:appcompat-v7:${androidSupportVersion}",
+            design     : "com.android.support:design:${androidSupportVersion}",
+            constraint : "com.android.support.constraint:constraint-layout:${constraintVersion}"
+    ]
+
+    bindDependencies = [
+            butterknife             : "com.jakewharton:butterknife:${butterknifeVersion}",
+            butterknifeAnnoProcessor: "com.jakewharton:butterknife-compiler:${butterknifeVersion}",
+            googleFactory           : "com.google.auto.factory:auto-factory:${googleFactoryVersion}",
+            daggerCompiler          : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger                  : "com.google.dagger:dagger:${daggerVersion}",
+            javaxAnnotation         : "org.glassfish:javax.annotation:${javaxAnnotationVersion}",
+    ]
+
+    dataDependencies = [
+            okHttp               : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+            gson                 : "com.google.code.gson:gson:${gsonVersion}",
+            rxJava               : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            rxAndroid            : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            androidAnnotations   : "com.android.support:support-annotations:${androidAnnotationsVersion}",
+            retrofit             : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitRxjavaAdapter: "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+            converter_gson       : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            converter_moshi      : "com.squareup.retrofit2:converter-moshi:${retrofitVersion}",
+            picasso              : "com.squareup.picasso:picasso:2.5.2"
+
+    ]
+
+    utilsDependencies = [
+            log_timber: "com.jakewharton.timber:timber:4.5.1"
+    ]
+}

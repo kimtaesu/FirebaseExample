@@ -1,0 +1,14 @@
+allprojects {
+    repositories {
+        jcenter()
+        maven { url 'https://maven.fabric.io/public' }
+        mavenLocal()
+    }
+}
+ext {
+    google_play_version = '10.2.1'
+    firebaseDependencies = [
+            crash        : "com.google.firebase:firebase-crash:${google_play_version}",
+            remote_config: "com.google.firebase:firebase-config:${google_play_version}",
+    ]
+}
