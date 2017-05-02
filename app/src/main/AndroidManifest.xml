@@ -16,5 +16,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".appindex.AppIndexActivity">
+            <intent-filter android:label="@string/app_name" android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "https://www.example.com/articles/" -->
+                <data android:scheme="https"
+                    android:host="www.example.com"
+                    android:pathPrefix="/articles/" />
+            </intent-filter>
+        </activity>
     </application>
 </manifest>

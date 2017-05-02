@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">FirebaseExample</string>
+
+    <!-- Remote Config-->
     <string name="fetch_remote_welcome_message">fetch remote welcome</string>
+
+    <!-- App Index-->
+    <string name="link_label">Link:</string>
+    <string name="none">None</string>
+
 </resources>

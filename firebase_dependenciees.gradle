@@ -10,5 +10,6 @@ ext {
     firebaseDependencies = [
             crash        : "com.google.firebase:firebase-crash:${google_play_version}",
             remote_config: "com.google.firebase:firebase-config:${google_play_version}",
+            appindexing  : "com.google.firebase:firebase-appindexing:${google_play_version}",
     ]
 }

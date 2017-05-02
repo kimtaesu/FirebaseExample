@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.google.firebase.crash.FirebaseCrash
 import com.hucet.filerebase.R
 import kotlinx.android.synthetic.main.fragment_crash.*
 
@@ -17,12 +16,14 @@ class CrashFragment : Fragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         report_crash.setOnClickListener {
             try {
                 throw FirebaseCrashException("Report exception on firebase")
             } catch (e: FirebaseCrashException) {
-                FirebaseCrash.report(e)
+                e.printStackTrace()
             }
+
         }
     }
 }

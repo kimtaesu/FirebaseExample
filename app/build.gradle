@@ -35,6 +35,9 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile firebaseDependencies.crash
     compile firebaseDependencies.remote_config
+    compile firebaseDependencies.appindexing
+
+
 }
 repositories {
     mavenCentral()
